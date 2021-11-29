@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Radium from 'radium'
 
 function App() {
+  let styles = {
+    both: {
+      background: 'black',
+      border: 'solid 1px white',
+      height: 100,
+      width: 100,
+    },
+    one: {
+      ':hover': {
+        background: 'blue',
+      },
+    },
+    two: {
+      ':hover': {
+        background: 'red',
+      },
+    },
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div key='one' style={[styles.both, styles.one]} />
+      <div key='two' style={[styles.both, styles.two]} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default Radium(App)
