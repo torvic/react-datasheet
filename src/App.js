@@ -1,14 +1,18 @@
 import './App.css'
-import { Container } from 'react-bootstrap'
-import Wrapper from './layout/Wrapper'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import StorePage from './pages/StorePage'
+import CartPage from './pages/CartPage'
+import CheckoutPage from './pages/CheckoutPage'
 
 function App() {
   return (
-    <Wrapper>
-      <Container>
-        <div className='content pt-4'>This is a content</div>
-      </Container>
-    </Wrapper>
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<StorePage />} />
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
