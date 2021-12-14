@@ -1,5 +1,16 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { cartActions } from '../../../../store/cart.slice'
+
 const CardProduct = ({ prod }) => {
-	const { name, price } = prod
+  const dispatch = useDispatch()
+  const cart = useSelector((state) => state.cart.cart)
+  const { name, price } = prod
+
+  console.log('add to cart', cart)
+
+  const handleAddToCart = () => {
+    dispatch(cartActions.addItemToCart(prod))
+  }
   return (
     <div className='p-0 col-md-6 col-lg-4'>
       <div className='card m-3 shadow bg-body rounded'>
@@ -13,9 +24,12 @@ const CardProduct = ({ prod }) => {
           <hr />
           <div className='d-flex align-items-center justify-content-between'>
             <div>
-              <a href='/' className='btn btn-outline-secondary me-2'>
+              <button
+                className='btn btn-outline-secondary me-2'
+                onClick={handleAddToCart}
+              >
                 Add to cart
-              </a>
+              </button>
               <a href='/' className='btn btn-outline-success'>
                 View
               </a>
