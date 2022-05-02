@@ -1,17 +1,17 @@
 import './App.css'
-import ListTodosComponent from './components/ListTodosComponent'
-import ListUsersComponent from './components/ListUsersComponent'
+import SearchTodos from './components/ListTodosComponent'
+import SearchUser from './components/ListUsersComponent'
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       <h2>Higher Order Components Example</h2>
       <div className='section'>
         <div>
-          <ListUsersComponent />
+          <SearchUser/>
         </div>
 				<div>
-					<ListTodosComponent/>
+					<SearchTodos/>
 				</div>
       </div>
     </div>

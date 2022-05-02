@@ -12,8 +12,20 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent)
 Use this [API 1](https://jsonplaceholder.typicode.com/users), [API 2](https://jsonplaceholder.typicode.com/todos):
 
 * Step 1: Create List of Users component.
+  * Make layouts `<input>`, list.
+  * Handle input event.
+  * Fetch api users.
+  * Filtered users data.
 * Step 2: Create List of ToDos component.
+  * Make layouts `<input>`, list.
+  * Handle input event.
+  * Fetch api todos.
+  * Filtered todos data.
 * Step 3: Make a Higher Order Component to these two created components.
+  * Make layouts `<input>`.
+  * Handle input event.
+  * Fetch api todos.
+  * Filtered todos data.
 * Step 4: Conclusion
 
 # Getting Started with Create React App
