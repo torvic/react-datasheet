@@ -1,3 +1,21 @@
+# React Higher Order Components (HOC) example
+
+* Advance technique in React for reusing component logic.
+* They are a pattern that emerges from React’s compositional nature.
+* Is a **function** that **takes a component** and returns a **new component**.
+
+```javascript
+// function (take a component) -> new components & props
+const EnhancedComponent = higherOrderComponent(WrappedComponent)
+```
+
+Use this [API 1](https://jsonplaceholder.typicode.com/users), [API 2](https://jsonplaceholder.typicode.com/todos):
+
+* Step 1: Create List of Users component.
+* Step 2: Create List of ToDos component.
+* Step 3: Make a Higher Order Component to these two created components.
+* Step 4: Conclusion
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
